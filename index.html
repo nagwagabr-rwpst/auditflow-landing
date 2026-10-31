@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>AuditFlow | Internal Audit Intelligence for Odoo</title>
-  <meta name="description" content="AuditFlow helps internal audit, risk, finance, and operations teams manage audit engagements, findings, risk exposure, and executive dashboards inside Odoo." />
+  <title>AuditFlow Standard | Internal Audit Operations for Odoo 20</title>
+  <meta name="description" content="AuditFlow Standard is an internal audit operations addon for Odoo 20. It covers audit engagements, review results, corrective actions, and an executive dashboard with KPI cards. English source with Arabic translation support." />
 
   <style>
     :root {
@@ -324,8 +324,8 @@
 
     .kpi strong {
       display: block;
-      font-size: 28px;
-      line-height: 1;
+      font-size: 22px;
+      line-height: 1.15;
       margin-top: 8px;
     }
 
@@ -340,6 +340,13 @@
       text-align: center;
     }
 
+    .pricing-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
     .badge {
       padding: 6px 10px;
       border-radius: 999px;
@@ -352,13 +359,12 @@
     }
 
     .price {
-      font-size: 48px;
+      font-size: 40px;
       font-weight: 950;
-      letter-spacing: -0.05em;
+      letter-spacing: -0.04em;
       margin: 12px 0;
+      line-height: 1.15;
     }
-
-    .price small { font-size: 16px; color: var(--muted); letter-spacing: 0; }
 
     .cta {
       background: linear-gradient(135deg, var(--dark), #172554);
@@ -443,13 +449,6 @@
       margin: 12px 0 0;
     }
 
-    .lead-counter {
-      color: #cbd5e1;
-      font-size: 14px;
-      font-weight: 700;
-      margin-top: 16px;
-    }
-
     .success-popup {
       position: fixed;
       inset: 0;
@@ -527,7 +526,9 @@
       .features, .kpis, .form-row { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; }
       .btn { width: 100%; }
+      .nav-buy { width: auto; }
       .cta { padding: 42px 18px; }
+      .price { font-size: 32px; }
     }
   </style>
 </head>
@@ -544,33 +545,45 @@
         <a href="#features">Features</a>
         <a href="#analytics">Analytics</a>
         <a href="#pricing">Pricing</a>
-        <a href="#contact" class="btn btn-primary">Request Demo</a>
+        <a href="#contact" class="btn btn-secondary">Request Demo</a>
       </div>
+
+      <a
+        class="btn btn-primary nav-buy"
+        href="https://apps.odoo.com/apps/modules/20.0/auditflow_standard"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Buy AuditFlow</a>
     </div>
   </nav>
 
   <header class="hero">
     <div class="container hero-grid">
       <div>
-        <div class="eyebrow">Internal Audit Intelligence for Odoo 19</div>
-        <h1>Turn your internal audit into a real-time decision engine</h1>
-        <p>AuditFlow helps audit teams, risk managers, finance teams, and executives manage engagements, findings, action plans, and risk insights directly inside Odoo.</p>
+        <div class="eyebrow">AuditFlow Standard for Odoo 20</div>
+        <h1>Internal audit operations for Odoo 20</h1>
+        <p>AuditFlow Standard is an internal audit operations addon for Odoo 20. It covers audit engagements, review results, corrective actions, and an executive dashboard with KPI cards.</p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Request Demo</a>
-          <a class="btn btn-secondary" href="#features">Explore Features</a>
+          <a
+            class="btn btn-primary"
+            href="https://apps.odoo.com/apps/modules/20.0/auditflow_standard"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Buy AuditFlow</a>
+          <a class="btn btn-secondary" href="#contact">Request Demo</a>
         </div>
 
         <div class="trust-row">
-          <span class="trust-pill">Built for Odoo 19</span>
-          <span class="trust-pill">EN / AR Ready</span>
-          <span class="trust-pill">Executive Dashboard</span>
-          <span class="trust-pill">Standard Version</span>
+          <span class="trust-pill">Built for Odoo 20</span>
+          <span class="trust-pill">English source, Arabic translation</span>
+          <span class="trust-pill">Executive dashboard</span>
+          <span class="trust-pill">Standard edition</span>
         </div>
       </div>
 
       <div class="product-card" aria-label="AuditFlow dashboard screenshot">
-        <img src="screenshot_dashboard.png" alt="AuditFlow dashboard screenshot inside Odoo" />
+        <img src="screenshot_dashboard.png" alt="AuditFlow Standard executive dashboard in Odoo 20" />
       </div>
     </div>
   </header>
@@ -578,45 +591,45 @@
   <section id="features">
     <div class="container">
       <div class="section-head">
-        <h2>Everything audit leaders need in one Odoo addon</h2>
-        <p>No more scattered spreadsheets. AuditFlow brings visibility, control, and real-time decision support inside Odoo.</p>
+        <h2>Internal audit operations in one Odoo 20 addon</h2>
+        <p>Standard edition covers audit engagements, review results, corrective actions, and dashboard KPI cards. It is not a certified GRC platform and it does not include a separate risk-management product.</p>
       </div>
 
       <div class="features">
         <article class="feature">
+          <div class="icon">📋</div>
+          <h3>Audit engagements</h3>
+          <p>Move an engagement through Draft, Fieldwork, Reporting, Issued, Closed, and Cancelled. Record the entity under review, audit team, lead reviewer, dates, scope, and objectives. An issued engagement report can be printed.</p>
+        </article>
+
+        <article class="feature">
+          <div class="icon">📝</div>
+          <h3>Review results</h3>
+          <p>Record severity, execution status, owner, target date, impact, likelihood, and management response. Risk Rating on a review result is calculated from Impact and Likelihood.</p>
+        </article>
+
+        <article class="feature">
+          <div class="icon">✅</div>
+          <h3>Corrective actions</h3>
+          <p>Create corrective actions from review results and follow the stored states draft, assigned, in progress, completed, and cancelled. Delayed actions are flagged.</p>
+        </article>
+
+        <article class="feature">
           <div class="icon">📊</div>
-          <h3>Real-Time KPIs</h3>
-          <p>Track engagements, findings, overdue actions, and risk exposure from one executive view.</p>
+          <h3>Dashboard KPI cards</h3>
+          <p>The executive dashboard shows KPI cards for engagements, review results, risk level, and corrective actions. The selected card opens a Bar Chart, Trend, or Distribution chart. Risk level counts review results in the current filters.</p>
         </article>
 
         <article class="feature">
           <div class="icon">🎯</div>
-          <h3>Smart Filtering</h3>
-          <p>Filter by auditor, auditee, status, severity, department, and due date to focus on what matters.</p>
-        </article>
-
-        <article class="feature">
-          <div class="icon">📈</div>
-          <h3>Dynamic Visual Analytics</h3>
-          <p>Interactive charts help reveal audit patterns, overdue actions, and risk concentration.</p>
+          <h3>Dashboard filters</h3>
+          <p>Filters are Reviewer, Entity under review, Execution status, and Risk level. They apply to KPI totals and the selected metric chart. Execution status filters review-result status. Risk level filters review-result severity.</p>
         </article>
 
         <article class="feature">
           <div class="icon">🌍</div>
-          <h3>Bilingual Ready</h3>
-          <p>Designed for English and Arabic audit teams with translation-ready UI and demo data architecture.</p>
-        </article>
-
-        <article class="feature">
-          <div class="icon">💡</div>
-          <h3>Executive Insights</h3>
-          <p>Summarize key audit metrics in a decision-ready panel for management and audit leadership.</p>
-        </article>
-
-        <article class="feature">
-          <div class="icon">🔌</div>
-          <h3>Extension Friendly</h3>
-          <p>A standard version that can evolve into Level 2 and Level 3 enterprise extensions.</p>
+          <h3>English and Arabic</h3>
+          <p>English is the source language, and the module ships with an Arabic translation catalog for audit operations, review results, plans, tasks, indicators, and the executive dashboard. Some report, portal, and search labels remain English. This is not complete bilingual coverage.</p>
         </article>
       </div>
     </div>
@@ -625,25 +638,25 @@
   <section id="analytics">
     <div class="container split">
       <div class="panel">
-        <div class="eyebrow">Why AuditFlow?</div>
-        <h2 style="font-size:38px;line-height:1.08;letter-spacing:-0.04em;margin:0;">Move from audit tracking to audit intelligence</h2>
+        <div class="eyebrow">Odoo 20 Standard</div>
+        <h2 style="font-size:38px;line-height:1.08;letter-spacing:-0.04em;margin:0;">Engagements, review results, and follow-up</h2>
 
         <ul class="checklist">
-          <li>Replace manual tracking with live audit visibility.</li>
-          <li>Identify critical and overdue findings faster.</li>
-          <li>Give executives a clean view of risk exposure.</li>
-          <li>Support Arabic and English teams with one product.</li>
+          <li>Track audit engagements from draft through issued and closed.</li>
+          <li>See open, high-risk, and overdue review results on the dashboard.</li>
+          <li>Follow corrective actions, including delayed and completed actions.</li>
+          <li>Open a Bar Chart, Trend, or Distribution chart for the selected KPI card.</li>
         </ul>
       </div>
 
       <div class="panel">
-        <h3 style="font-size:24px;margin:0 0 12px;">Built for audit teams using Odoo</h3>
-        <p style="color:#64748b;margin:0 0 18px;">AuditFlow is ideal for internal audit departments, governance teams, risk managers, and Odoo implementers serving enterprise clients.</p>
+        <h3 style="font-size:24px;margin:0 0 12px;">Built for internal audit teams on Odoo 20</h3>
+        <p style="color:#64748b;margin:0 0 18px;">AuditFlow Standard is for internal audit teams that record engagements, review results, and corrective actions in Odoo. Charts are Bar, Trend, and Distribution for the selected dashboard metric. Arabic translation support does not mean every label is translated.</p>
 
         <div class="kpis">
-          <div class="kpi"><span>Setup</span><strong>Fast</strong></div>
-          <div class="kpi"><span>Interface</span><strong>Clean</strong></div>
-          <div class="kpi"><span>Focus</span><strong>Audit</strong></div>
+          <div class="kpi"><span>Engagements</span><strong>KPI cards</strong></div>
+          <div class="kpi"><span>Review results</span><strong>Status and severity</strong></div>
+          <div class="kpi"><span>Corrective actions</span><strong>Follow-up</strong></div>
         </div>
       </div>
     </div>
@@ -652,15 +665,23 @@
   <section id="pricing">
     <div class="container">
       <div class="section-head">
-        <h2>Simple launch pricing</h2>
-        <p>Start with a focused audit intelligence dashboard and extend the product as your audit workflow grows.</p>
+        <h2>AuditFlow Standard</h2>
+        <p>Odoo 20 internal audit operations addon. Build 20.0.4.1.1. Purchase on the Odoo Apps listing.</p>
       </div>
 
       <div class="pricing">
-        <div class="badge">Standard Version</div>
-        <div class="price">Starting from $59 <small>one-time</small></div>
-        <p style="color:#64748b;margin:0 0 22px;">Includes AuditFlow dashboard, KPIs, filters, bilingual-ready structure, and smart charts for Odoo 19.</p>
-        <a class="btn btn-primary" href="#contact">Request Demo</a>
+        <div class="badge">Odoo 20 · Build 20.0.4.1.1</div>
+        <div class="price">$59 — One-time payment</div>
+        <p style="color:#64748b;margin:0 0 22px;">Audit engagements, review results, corrective actions, dashboard KPI cards, the supported dashboard filters, and Bar, Trend, and Distribution charts. English source with Arabic translation support.</p>
+        <div class="pricing-actions">
+          <a
+            class="btn btn-primary"
+            href="https://apps.odoo.com/apps/modules/20.0/auditflow_standard"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Buy AuditFlow</a>
+          <a class="btn btn-secondary" href="#contact">Request Demo</a>
+        </div>
       </div>
     </div>
   </section>
@@ -671,19 +692,17 @@
         <div class="cta-grid">
           <div>
             <div class="eyebrow">Request Demo</div>
-            <h2>Ready to bring audit control into Odoo?</h2>
-            <p>Fill the form and we will contact you about demo access, installation, customization, or Odoo App Store availability.</p>
+            <h2>Ask about a demo or installation</h2>
+            <p>Use this form for a demo, installation help, or customization. To buy AuditFlow Standard, use Buy AuditFlow. It opens the Odoo Apps listing in a new tab.</p>
 
             <a
               class="btn btn-whatsapp"
               href="https://wa.me/201006786392?text=Hello%20I%20would%20like%20to%20request%20an%20AuditFlow%20demo"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
-              💬 Chat on WhatsApp
+              Chat on WhatsApp
             </a>
-
-            <div class="lead-counter" id="leadCounter">CRM leads saved locally: 0</div>
           </div>
 
           <div class="form-card">
@@ -718,7 +737,6 @@
                   <option value="Demo request">Demo request</option>
                   <option value="Installation support">Installation support</option>
                   <option value="Customization">Customization</option>
-                  <option value="Odoo App Store access">Odoo App Store access</option>
                 </select>
               </label>
 
@@ -730,7 +748,6 @@
               <button class="btn btn-primary" type="submit">Send Demo Request</button>
 
               <p class="form-note">
-                
                 We usually respond within 24–48 hours.
               </p>
             </form>
@@ -743,60 +760,28 @@
   <div class="success-popup" id="successPopup" role="dialog" aria-modal="true" aria-labelledby="successTitle">
     <div class="success-card">
       <div class="success-icon">✓</div>
-      <h3 id="successTitle">Demo request prepared</h3>
-      <p>Your email app should open with the request details. We also saved this lead locally for CRM-style testing.</p>
+      <h3 id="successTitle">Request submitted</h3>
+      <p>Your request was submitted.</p>
       <button class="btn btn-primary" type="button" id="closePopup">Done</button>
     </div>
   </div>
 
   <footer>
     <div class="container footer-inner">
-      <div>© 2026 AuditFlow. Internal Audit Intelligence for Odoo.</div>
-      <div>Built for internal audit, risk, finance, and governance teams.</div>
+      <div>© 2026 AuditFlow. Internal audit operations for Odoo 20.</div>
+      <div>Standard edition · Build 20.0.4.1.1 · English source with Arabic translation support.</div>
     </div>
   </footer>
   <script>
     const form = document.getElementById("demoForm");
     const popup = document.getElementById("successPopup");
     const closePopup = document.getElementById("closePopup");
-    const leadCounter = document.getElementById("leadCounter");
-  
-    function getLeads() {
-      try {
-        return JSON.parse(localStorage.getItem("auditflow_leads") || "[]");
-      } catch (error) {
-        return [];
-      }
-    }
-  
-    function saveLead(lead) {
-      const leads = getLeads();
-      leads.push(lead);
-      localStorage.setItem("auditflow_leads", JSON.stringify(leads));
-      updateLeadCounter();
-    }
-  
-    function updateLeadCounter() {
-      leadCounter.textContent = "CRM leads saved locally: " + getLeads().length;
-    }
-  
+
     form.addEventListener("submit", async function(event) {
       event.preventDefault();
-  
+
       const data = new FormData(form);
-  
-      const lead = {
-        name: data.get("name"),
-        email: data.get("email"),
-        company: data.get("company"),
-        phone: data.get("phone"),
-        request_type: data.get("request_type"),
-        message: data.get("message"),
-        submitted_at: new Date().toISOString()
-      };
-  
-      saveLead(lead);
-  
+
       try {
         const response = await fetch(form.action, {
           method: "POST",
@@ -805,31 +790,27 @@
             "Accept": "application/json"
           }
         });
-  
+
         if (response.ok) {
           popup.classList.add("is-open");
           form.reset();
         } else {
-          alert("Something went wrong. Please try again or contact us on WhatsApp.");
+          alert("The request was not accepted. Please try again or contact us on WhatsApp.");
         }
       } catch (error) {
-        alert("Connection error. Please try again or contact us on WhatsApp.");
+        alert("Connection error. The request was not submitted. Please try again or contact us on WhatsApp.");
       }
     });
-  
+
     closePopup.addEventListener("click", function() {
       popup.classList.remove("is-open");
     });
-  
+
     popup.addEventListener("click", function(event) {
       if (event.target === popup) {
         popup.classList.remove("is-open");
       }
     });
-  
-    updateLeadCounter();
   </script>
-  
-  
 </body>
 </html>
